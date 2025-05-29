@@ -1,8 +1,13 @@
 import React from 'react'
 
-function ProjectCard() {
+interface ProjectCardProps {
+  children: React.ReactNode;
+}
+function ProjectCard({ children }: ProjectCardProps) {
   return (
-    <div>ProjectCard</div>
+    <li className="inline-block overflow-hidden rounded-lg max-w-xl relative">
+      {children}
+    </li>
   )
 }
 

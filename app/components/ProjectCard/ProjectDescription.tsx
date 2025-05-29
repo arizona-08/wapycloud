@@ -1,4 +1,3 @@
-import { triggerAsyncId } from 'async_hooks';
 import React from 'react'
 import ProjectTag from './ProjectTag';
 
@@ -12,7 +11,7 @@ interface ProjectDescriptionProps {
 function ProjectDescription({title, description, link, tags, date }: ProjectDescriptionProps) {
   return (
     <div className="p-4 bg-white">
-      <ul className="tags-container flex items-center gap-1">
+      <ul className="tags-container flex items-center gap-2">
         {tags.map((tag, index) => (
           <li key={index}>
             <ProjectTag text={tag} />
@@ -23,9 +22,13 @@ function ProjectDescription({title, description, link, tags, date }: ProjectDesc
       <div>
         <h3 className="text-xl font-bold mt-4 mb-2">{title}</h3>
         <p className="text-custom-text-gray mb-4">{description}</p>
-        <a href={link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-          Voir le projet
-        </a>
+        <div className="flex items-center justify-between">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+            Voir le projet
+          </a>
+          <span className="text-custom-text-gray">{date}</span>
+        </div>
+        
       </div>
     </div>
   )
