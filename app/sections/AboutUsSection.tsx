@@ -45,7 +45,7 @@ function AboutUsSection() {
     <section className="mt-28">
       <div className="p-5">
         <section>
-          <div className="text-center mb-15">
+          <div className="text-center mb-18">
             <Title text="À propos" />
             <p className="text-custom-text-gray mt-5">Avec 12 années d'expertise au total, notre équipe est là pour vous accompagner à réaliser votre site web</p>
           </div>
@@ -72,7 +72,7 @@ function AboutUsSection() {
           </ul>
         </section>
 
-        <section>
+        <section className="mt-18">
           <div>
             <h3 className="text-2xl font-bold mb-3">Pouquoi nous confier <span className="font-secondary text-primary">votre site ?</span></h3>
             <p>
