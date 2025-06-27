@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeroSection from "./sections/HeroSection";
 import AboutUsSection from "./sections/AboutUsSection";
 import RealisationsSection from "./sections/RealisationsSection";
+import OfferSection from "./sections/OfferSection";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <AboutUsSection />
       <RealisationsSection />
+      <OfferSection />
     </div>
   );
 }

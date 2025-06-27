@@ -11,7 +11,7 @@ interface ProjectDescriptionProps {
 function ProjectDescription({title, description, link, tags, date }: ProjectDescriptionProps) {
   return (
     <div className="p-4 bg-white">
-      <ul className="tags-container flex items-center gap-2">
+      <ul className="tags-container flex items-center gap-2 flex-wrap">
         {tags.map((tag, index) => (
           <li key={index}>
             <ProjectTag text={tag} />

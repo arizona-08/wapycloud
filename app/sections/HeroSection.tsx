@@ -8,7 +8,7 @@ function HeroSection() {
       <div>
         <div className="relative">
           <div className="w-7/8 relative left-1/2 -translate-x-1/2">
-            <h1 className="text-4xl font-bold text-center">Des sites web prêts à <span className="text-primary font-secondary">performer</span></h1>
+            <h1 className="text-4xl font-bold text-center">Des sites web prêts à <span className="text-primary font-secondary font-normal">performer</span></h1>
             <p className="text-custom-text-gray text-center mt-2">une solution SaaS clé en main pour lancer votre site rapidement.</p>
           </div>
         </div>

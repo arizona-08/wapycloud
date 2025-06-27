@@ -51,7 +51,7 @@ function AboutUsSection() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-3">Des compétences solides pour des sites qui <span className="font-secondary text-primary">tiennent la route.</span></h3>
+            <h3 className="text-2xl font-bold mb-3">Des compétences solides pour des sites qui <span className="font-secondary text-primary font-normal">tiennent la route.</span></h3>
             <p>
               Nous combinons design, performance et technologies modernes pour vous livrer des sites efficaces, durables et évolutifs. Notre équipe maîtrise chaque étape de la création d’un site web, du prototype à la mise en ligne.
             </p>
