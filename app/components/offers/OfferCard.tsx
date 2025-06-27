@@ -18,7 +18,7 @@ interface OfferCardProps{
 function OfferCard({title, plan, description, price, price_per_month, price_per_month_after_one_year, features, features_pro, isSubscribing}: OfferCardProps) {
   return (
     <li className={`shrink-0 inline-block min-w-72 w-full max-w-96 rounded-xl border border-gray-200 p-7 transition-all duration-300 ${isSubscribing ? 'bg-gradient-to-tr from-primary/20 from-20% to-white to-50%' : 'bg-white'}`}>
-      <OfferIndicator />
+      <OfferIndicator offerTitle={title}/>
       <div className="mb-5">
         <OfferTitle title={title} plan={plan} isSubscribing={isSubscribing}/>
         <p className="text-gray-600">{description}</p>
