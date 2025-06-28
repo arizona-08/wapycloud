@@ -101,7 +101,7 @@ function Footer() {
 
             <ul className="flex flex-col gap-2">
               {footerLink.links.map((link, linkIndex) => (
-                <li key={linkIndex} className=" text-[#696969] font-normal">
+                <li key={linkIndex} className="text-[#696969] font-normal">
                   <a href={link.href}>{link.name}</a>
                 </li>
               ))}
