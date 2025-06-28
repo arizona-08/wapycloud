@@ -4,7 +4,7 @@ import Burgermenu from '../Burgermenu'
 
 function Navbar() {
   return (
-    <header className="bg-white">
+    <header className="sticky top-0 left-0 w-full bg-white z-20">
       <nav className="px-6 py-5 flex justify-between items-center">
         <div className="flex items-center gap-1">
           <div className="logo-container">

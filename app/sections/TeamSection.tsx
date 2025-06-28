@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../components/Title'
+import TeamMembersCarousel from '../components/TeamMembersCarousel/TeamMembersCarousel'
 
 function TeamSection() {
   const teamMembers = [
@@ -39,6 +40,8 @@ function TeamSection() {
             Design, développement, accompagnement : chacun apporte son expertise pour faire de votre projet un vrai site qui fonctionne.
           </p>
         </div>
+
+        <TeamMembersCarousel teamMembers={teamMembers} />
 
       </div>
     </section>
