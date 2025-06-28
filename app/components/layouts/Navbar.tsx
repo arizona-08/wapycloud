@@ -16,7 +16,7 @@ function Navbar() {
               className="logo-image"
             />
           </div>
-          <p className="text-xl font-medium">WapyCloud</p>
+          <p className="text-xl font-semibold">WapyCloud</p>
         </div>
 
         <div>
