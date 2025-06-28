@@ -1,0 +1,30 @@
+import React from 'react'
+import Title from '../components/Title'
+import ContactForm from '../components/ContactForm'
+
+function ContactSection() {
+  return (
+    <section className="my-28">
+      <div className="p-5">
+        <div className="text-center mb-18">
+          <Title text="Contact"/>
+          <p className="text-custom-text-gray mt-5">Besoin d’un site ? Décrivez nous votre demande en remplissant le formulaire de contat</p>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold mb-3">Il est temps de parler de <span className="font-secondary text-primary font-normal">votre projet.</span></h3>
+          <p>
+            Remplissez ce formulaire en nous indiquant le plus de détails possible sur la vision que vous avez de votre futur site web.
+          </p>
+        </div>
+
+        <ContactForm />
+      </div>
+
+      
+      
+    </section>
+  )
+}
+
+export default ContactSection
