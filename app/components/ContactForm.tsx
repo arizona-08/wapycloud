@@ -27,32 +27,32 @@ function ContactForm() {
 
 
   return (
-    <form method="post" className="mt-7" onSubmit={handleSubmit}>
+    <form method="post" className="md:bg-white md:p-5 md:min-w-2xl md:max-w-3xl md:rounded-lg" onSubmit={handleSubmit}>
       <div className="space-y-3">
         {/* Top form */}
-        <div className="space-y-3 md:flex md:space-x-3">
-          <div className="flex flex-col gap-1">
+        <div className="space-y-3 md:flex md:space-x-5">
+          <div className="flex flex-col gap-1 md:flex-1">
             <label htmlFor="firstname">Votre prénom</label>
             <input
               type="text"
               name="firstName"
               id="firstName"
               className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
-              placeholder="John"
+              placeholder="Prénom"
               value={credentials.firstname}
               onChange={(e) => setCredentials({ ...credentials, firstname: e.target.value })}
               required
             />
           </div>
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 md:flex-1">
             <label htmlFor="lastname">Votre nom</label>
             <input
               type="text"
               name="lastname"
               id="lastname"
               className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
-              placeholder="John"
+              placeholder="Nom"
               value={credentials.lastname}
               onChange={(e) => setCredentials({ ...credentials, lastname: e.target.value })}
               required
@@ -61,22 +61,22 @@ function ContactForm() {
         </div>
         
         {/* Middle form */}
-        <div className="space-y-3 md:flex md:space-x-3">
-          <div className="flex flex-col gap-1">
+        <div className="space-y-3 md:flex md:space-x-5">
+          <div className="flex flex-col gap-1 md:flex-1">
             <label htmlFor="email">Votre email</label>
             <input
               type="text"
               name="email"
               id="email"
               className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
-              placeholder="John"
+              placeholder="email"
               value={credentials.email}
               onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
               required
             />
           </div>
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 md:flex-1">
             <label htmlFor="plan_select">Votre plan</label>
             <select
               name="plan_select"

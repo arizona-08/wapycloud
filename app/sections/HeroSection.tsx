@@ -14,6 +14,13 @@ function HeroSection() {
         </div>
 
         <div className="hero-image-container relative max-w-2xl mx-auto overflow-hidden rounded-lg mt-2">
+          <div className="hidden md:flex items-center gap-3 absolute top-0 left-1/2 -translate-x-1/2 bg-body-background p-3 text-sm rounded-3xl ">
+            <div className="absolute top-0 -left-2 w-7 h-4 bg-body-background before:absolute before:top-0 before:-translate-x-[72%] before:w-8 before:h-8 before:bg-white before:rounded-full"></div>
+            <div className="absolute top-0 -right-2 w-7 h-4 bg-body-background before:absolute before:top-0 before:translate-x-[60%] before:w-8 before:h-8 before:bg-white before:rounded-full"></div>
+            <CTA type="link" color='primary' href='/' text="Nous&nbsp;contacter" className='flex-1'/>
+            <CTA type="link" color='secondary' href='/' text="À propos" className='flex-1'/>
+          </div>
+
           <Image 
             src="/pngs/hero-image.png"
             alt="Hero Image"
@@ -24,7 +31,7 @@ function HeroSection() {
           />
         </div>
 
-        <div className="flex items-center gap-2 justify-center mt-3.5 max-w-2xl mx-auto">
+        <div className="flex items-center gap-2 justify-center mt-3.5 max-w-2xl mx-auto md:hidden">
           <CTA type="link" color='primary' href='/' text="Nous contacter" className='flex-1'/>
           <CTA type="link" color='secondary' href='/' text="À propos" className='flex-1'/>
         </div>

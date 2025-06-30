@@ -28,7 +28,7 @@ function TeamSection() {
   ]
   return (
     <section className="mt-28">
-      <div className="p-5">
+      <div className="p-5 max-w-7xl mx-auto">
         <div className="text-center mb-18">
           <Title text="Équipe" />
           <p className="text-custom-text-gray mt-5">Nous sommes 3 étudiants passionnés de design, développement web et réseau</p>

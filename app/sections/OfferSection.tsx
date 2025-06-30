@@ -85,22 +85,25 @@ function OfferSection() {
   }
   return (
     <section className="mt-28">
-      <div className="p-5">
+      <div className="p-5 max-w-7xl mx-auto">
         <div className="text-center mb-18">
           <Title text="Offres"/>
           <p className="text-custom-text-gray mt-5">Nous vous proposons des offres adaptés à vos besoins et vos envies</p>
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-3">Une solution clé en main pour créer votre site<span className="font-secondary text-primary font-normal"> sans complications.</span></h3>
-          <p>
-            Que vous soyez indépendant, artisan, commerçant ou dirigeant d’entreprise, nous vous proposons une solution simple, rapide et performante pour être visible en ligne.
-          </p>
+          <div className="max-w-2xl">
+            <h3 className="text-2xl font-bold mb-3">Une solution clé en main pour créer votre site<span className="font-secondary text-primary font-normal"> sans complications.</span></h3>
+            <p>
+              Que vous soyez indépendant, artisan, commerçant ou dirigeant d’entreprise, nous vous proposons une solution simple, rapide et performante pour être visible en ligne.
+            </p>
+          </div>
+
 
           <div className="w-full flex justify-center">
             <OfferSwitch isSubscription={isSubscribing} triggerSubscribe={handleSubscribe} triggerUnsubscribe={handleUnsubscribe}/>
           </div>
-          <ul className="mt-8 flex flex-col items-center gap-5 ">
+          <ul className="mt-8 flex flex-col items-center gap-5 md:flex-row md:flex-wrap md:items-start">
             {offers.map((offer, index) => (
               <OfferCard 
                 key={index}

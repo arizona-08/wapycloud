@@ -6,7 +6,7 @@ interface PresentationCardProps {
 }
 function PrestationCard({ children }: PresentationCardProps) {
   return (
-    <div className="bg-custom-background-gray p-7 rounded-xl min-w-72 max-w-80">
+    <div className="bg-custom-background-gray p-7 rounded-xl min-w-60 max-w-80 md:flex-1">
       {children}
     </div>
   )

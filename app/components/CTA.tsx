@@ -23,8 +23,8 @@ type CTAProps = LinkCTAProps | ButtonCTAProps
 
 function CTA({ type, color, text, onClick, href, className }: CTAProps) {
   const classes = {
-    primary: "bg-primary border border-primary text-white text-center rounded-full p-2.5",
-    secondary: "bg-white border border-primary text-primary text-center rounded-full p-2.5"
+    primary: "inline-block bg-primary border border-primary text-white text-center rounded-full p-2.5",
+    secondary: "inline-block bg-white border border-primary text-primary text-center rounded-full p-2.5"
   }
   return (
     <>
