@@ -27,7 +27,7 @@ function ContactForm() {
 
 
   return (
-    <form method="post" className="md:bg-white md:p-5 md:min-w-2xl md:max-w-3xl md:rounded-lg" onSubmit={handleSubmit}>
+    <form method="post" className="md:bg-white md:p-5 flex-2 md:rounded-lg" onSubmit={handleSubmit}>
       <div className="space-y-3">
         {/* Top form */}
         <div className="space-y-3 md:flex md:space-x-5">

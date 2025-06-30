@@ -21,7 +21,7 @@ function ContactSection() {
 
         <div className="mt-7 md:flex md:justify-center md:items-stretch">
           <ContactForm />
-          <div className="hidden md:block relative rounded-tr-lg rounded-br-lg overflow-hidden">
+          <div className="hidden md:block relative flex-1 rounded-tr-lg rounded-br-lg overflow-hidden">
             <Image
               src="/pngs/contact-form-pic.jpg"
               alt="image de projet"
