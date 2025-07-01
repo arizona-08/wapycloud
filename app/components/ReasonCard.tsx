@@ -11,7 +11,7 @@ interface ReasonProps{
 function ReasonCard({title, description, number, icon}: ReasonProps ) {
   return (
     <li>
-      <div className="min-w-60 max-w-72 p-4 border border-gray-300 rounded-lg">
+      <div className=" min-w-60 max-w-72 p-4 border border-gray-300 rounded-lg">
         <div className="head flex items-center justify-between mb-3">
           <Image 
             src={icon}
@@ -19,7 +19,7 @@ function ReasonCard({title, description, number, icon}: ReasonProps ) {
             width={30}
             height={30}
           />
-          <span className="text-custom-text-gray/80 font-black text-2xl">{number}</span>
+          <span className="text-[#E6E6E6] font-poppins font-bold text-2xl">{number}</span>
         </div>
 
         <h4 className="font-semibold">{title}</h4>
