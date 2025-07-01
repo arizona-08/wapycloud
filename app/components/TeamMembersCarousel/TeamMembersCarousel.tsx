@@ -68,7 +68,7 @@ function TeamMembersCarousel({ teamMembers }: TeamMembersCarouselProps) {
 
       <div className="w-full flex justify-center mt-5 lg:hidden">
         <div className="indicators flex items-center gap-2">
-          {teamMembers.map((_, index) => (
+          {Array.from({length: Math.ceil(3 / cardsPerView)}, (_, index) => (
             <button
               key={index}
               className={`indicator-item w-3 h-3 rounded-full transition-colors duration-300 ${scrollIndex === index ? 'bg-primary' : 'bg-custom-background-gray'} `}

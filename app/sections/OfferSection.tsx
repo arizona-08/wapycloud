@@ -103,7 +103,7 @@ function OfferSection() {
           <div className="w-full flex justify-center">
             <OfferSwitch isSubscription={isSubscribing} triggerSubscribe={handleSubscribe} triggerUnsubscribe={handleUnsubscribe}/>
           </div>
-          <ul className="mt-8 flex flex-col items-center gap-5 md:flex-row md:flex-wrap md:items-start">
+          <ul className="mt-8 flex flex-col items-center gap-5 lg:flex-row lg:items-start">
             {offers.map((offer, index) => (
               <OfferCard 
                 key={index}

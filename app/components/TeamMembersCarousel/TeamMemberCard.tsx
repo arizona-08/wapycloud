@@ -15,7 +15,7 @@ interface TeamMemberCardProps {
 
 function TeamMemberCard({member}: TeamMemberCardProps) {
   return (
-    <div className="snap-center shrink-0 min-w-72 max-w-80 p-7 bg-[#F4F4F4] rounded-md">
+    <div className="snap-center min-w-72 max-w-80 p-7 bg-[#F4F4F4] rounded-md">
       <div className="relative w-full min-h-72 rounded-md overflow-hidden">
         <div className="absolute top-2 right-2 z-10 px-3 py-0.5 bg-[#FAEEE2] rounded-full flex items-center gap-1">
           <Image

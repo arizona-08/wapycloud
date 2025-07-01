@@ -29,3 +29,23 @@
 body {
   
 }
+
+.burger-menu.active{
+  span:nth-child(1){
+    top: 50%;
+    transform: rotate(45deg);
+    transition: all 150ms;
+  }
+
+  span:nth-child(2){
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: all 150ms;
+  }
+
+  span:nth-child(3){
+    top: 50%;
+    opacity: 0;
+    transition: all 150ms;
+  }
+}

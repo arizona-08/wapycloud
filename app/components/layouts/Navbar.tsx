@@ -1,8 +1,10 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import Burgermenu from '../Burgermenu'
 
 function Navbar() {
+  const [isActive, setIsActive] = React.useState(false);
   const links = [
     { name: 'Accueil', href: '/' },
     { name: 'Realisations', href: '#realisations' },
@@ -12,7 +14,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 left-0 w-full bg-white z-20">
-      <nav className="px-6 py-5 flex justify-between items-center max-w-7xl mx-auto">
+      <nav className="relative px-6 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-1">
           <div className="logo-container">
             <Image
@@ -53,8 +55,23 @@ function Navbar() {
 
         <div className="md:hidden">
           <div className="menu-burger-container">
-            <Burgermenu />
+            <Burgermenu isActive={isActive} handleClick={() => setIsActive(!isActive)}/>
           </div>
+        </div>
+
+        <div className={`absolute top-full left-0 w-full bg-white border-t-2 border-body-background overflow-hidden transition-all duration-150 ease-in-out md:hidden ${isActive ? 'max-h-96 py-2' : 'max-h-0' }`}>
+          <ul className="px-6 py-2">
+            {links.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className="font-medium hover:text-primary transition-colors"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
       </nav>
