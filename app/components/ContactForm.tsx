@@ -40,8 +40,8 @@ function ContactForm() {
             <label htmlFor="firstname">Votre prénom</label>
             <input
               type="text"
-              name="firstName"
-              id="firstName"
+              name="firstname"
+              id="firstname"
               className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               placeholder="Prénom"
               value={credentials.firstname}

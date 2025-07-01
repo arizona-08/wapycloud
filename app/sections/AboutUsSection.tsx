@@ -71,7 +71,7 @@ function AboutUsSection() {
   ]
 
   return (
-    <section className="mt-28">
+    <section id="a-propos" className="mt-28">
       <div className="p-5 max-w-7xl mx-auto">
         <section>
           <div className="text-center mb-18">

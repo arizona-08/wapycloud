@@ -6,9 +6,9 @@ import Burgermenu from '../Burgermenu'
 function Navbar() {
   const [isActive, setIsActive] = React.useState(false);
   const links = [
-    { name: 'Accueil', href: '/' },
+    { name: 'Accueil', href: '#accueil' },
     { name: 'Realisations', href: '#realisations' },
-    { name: 'Offre', href: '#offre' },
+    { name: 'Offres', href: '#offres' },
     { name: 'Équipe', href: '#equipe' },
   ]
 

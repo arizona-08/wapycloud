@@ -4,7 +4,7 @@ import CTA from '../components/CTA'
 
 function HeroSection() {
   return (
-    <section className="px-5 py-5">
+    <section id="accueil" className="px-5 py-5">
       <div>
         <div className="relative">
           <div className="w-7/8 relative left-1/2 -translate-x-1/2">
@@ -28,6 +28,7 @@ function HeroSection() {
             height={0}
             sizes="100vw"
             style={{ width: '100%', height: 'auto' }}
+            priority={true}
           />
         </div>
 

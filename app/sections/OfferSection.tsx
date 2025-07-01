@@ -84,7 +84,7 @@ function OfferSection() {
     setIsSuscribing(false)
   }
   return (
-    <section className="mt-28">
+    <section id="offres" className="mt-28">
       <div className="p-5 max-w-7xl mx-auto">
         <div className="text-center mb-18">
           <Title text="Offres"/>

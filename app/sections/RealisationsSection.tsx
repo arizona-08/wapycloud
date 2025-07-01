@@ -9,7 +9,7 @@ function RealisationsSection() {
     {
       title: "Parc André Malraux",
       description: "Refonte d’un site informatif pour un parc urbain : navigation simplifiée, identité visuelle modernisée et meilleure accessibilité mobile.",
-      projectLink: '/',
+      projectLink: 'https://coursdesign.com/parcandremalraux1/',
       tags: ['WordPress', 'Figma', 'JavaScript'],
       date: 'Avril 2025',
       imgsrc: '/pngs/parc_andre_malraux.png',
@@ -18,7 +18,7 @@ function RealisationsSection() {
     {
       title: "Babel Master",
       description: "Création d’une plateforme claire et engageante pour promouvoir des cours d’anglais au coeur de la ville de Nanterre.",
-      projectLink: '/',
+      projectLink: 'https://dxpi03.webynov.com/',
       tags: ['WordPress', 'Elementor', 'Figma', 'Javascript'],
       date: 'Mai 2025',
       imgsrc: '/pngs/babelmaster.png',
@@ -26,7 +26,7 @@ function RealisationsSection() {
     },
   ]
   return (
-    <section className="mt-28">
+    <section id="realisations"  className="mt-28">
       <div className="p-5 max-w-7xl mx-auto">
         <div className="text-center mb-18">
           <Title text="Réalisations"/>

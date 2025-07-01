@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 function ContactSection() {
   return (
-    <section className="my-28">
+    <section id="contact" className="my-28">
       <div className="p-5 max-w-7xl mx-auto">
         <div className="text-center mb-18">
           <Title text="Contact"/>
