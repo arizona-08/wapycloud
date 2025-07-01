@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import React from 'react'
+import axios from 'axios';
 
 function ContactForm() {
   const [credentials, setCredentials] = React.useState({
@@ -20,9 +21,13 @@ function ContactForm() {
     "Pro +",
   ]
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     console.log('Form submitted with:', credentials);
+    const response = await axios.post('/api/send-email', credentials);
+    if(response.status === 200){
+      console.log(response.data);
+    }
   }
 
 

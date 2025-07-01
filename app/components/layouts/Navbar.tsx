@@ -13,7 +13,7 @@ function Navbar() {
   ]
 
   return (
-    <header className="sticky top-0 left-0 w-full bg-white z-20">
+    <header className="sticky top-0 left-0 w-full bg-white z-40">
       <nav className="relative px-6 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-1">
           <div className="logo-container">
