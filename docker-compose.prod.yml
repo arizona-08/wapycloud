@@ -1,0 +1,15 @@
+# docker-compose.prod.yml
+version: '3.8'
+
+services:
+  app:
+    image: wapy-app-prod
+    build:
+      context: ./
+      target: production
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: always
