@@ -13,7 +13,7 @@ function ContactSection() {
         </div>
 
         <div className="max-w-2xl">
-          <h3 className="text-2xl font-bold mb-3">Il est temps de parler de <span className="font-secondary text-primary font-normal">votre projet.</span></h3>
+          <h3 className="text-4xl font-bold mb-3">Il est temps de parler de <span className="font-secondary text-primary font-normal">votre projet.</span></h3>
           <p>
             Remplissez ce formulaire en nous indiquant le plus de détails possible sur la vision que vous avez de votre futur site web.
           </p>

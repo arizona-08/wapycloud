@@ -34,8 +34,8 @@ function TeamSection() {
           <p className="text-custom-text-gray mt-5">Nous sommes 3 étudiants passionnés de design, développement web et réseau</p>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-bold mb-3">Trois profil, une même passion<span className="font-secondary text-primary font-normal"> du web.</span></h3>
+        <div className="max-w-2xl">
+          <h3 className="text-4xl font-bold mb-3">Trois profil, une même passion<span className="font-secondary text-primary font-normal"> du web.</span></h3>
           <p>
             Design, développement, accompagnement : chacun apporte son expertise pour faire de votre projet un vrai site qui fonctionne.
           </p>

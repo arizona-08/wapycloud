@@ -34,8 +34,8 @@ function RealisationsSection() {
         </div>
 
         <div>
-          <div className="max-w-xl">
-            <h3 className="text-2xl font-bold mb-3">Des projets concrets, des <span className="font-secondary text-primary font-normal">résultats visibles.</span></h3>
+          <div className="max-w-2xl">
+            <h3 className="text-4xl font-bold mb-3">Des projets concrets, des <span className="font-secondary text-primary font-normal">résultats visibles.</span></h3>
             <p>
               Vous pouvez retrouver ci-dessous différents sites web que nous sommes capables
               de mettre en place pour répondre à vos besoins.
