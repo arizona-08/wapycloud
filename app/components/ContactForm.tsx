@@ -3,12 +3,15 @@ import Image from 'next/image';
 import React from 'react'
 import axios from 'axios';
 
-function ContactForm() {
+interface ContactFormProps {
+  selectedOffer: string
+}
+function ContactForm({selectedOffer}: ContactFormProps) {
   const [credentials, setCredentials] = React.useState({
     firstname: '',
     lastname: '',
     email: '',
-    plan: 'Template',
+    plan: selectedOffer,
     message: ''
   });
 
@@ -42,7 +45,7 @@ function ContactForm() {
               type="text"
               name="firstname"
               id="firstname"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               placeholder="Prénom"
               value={credentials.firstname}
               onChange={(e) => setCredentials({ ...credentials, firstname: e.target.value })}
@@ -56,7 +59,7 @@ function ContactForm() {
               type="text"
               name="lastname"
               id="lastname"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               placeholder="Nom"
               value={credentials.lastname}
               onChange={(e) => setCredentials({ ...credentials, lastname: e.target.value })}
@@ -73,8 +76,8 @@ function ContactForm() {
               type="text"
               name="email"
               id="email"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
-              placeholder="email"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              placeholder="Email"
               value={credentials.email}
               onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
               required
@@ -86,7 +89,7 @@ function ContactForm() {
             <select
               name="plan_select"
               id="plan_select"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               value={credentials.plan}
               onChange={(e) => setCredentials({ ...credentials, plan: e.target.value })}
               required
@@ -106,7 +109,7 @@ function ContactForm() {
           <textarea
             name="message"
             id="message"
-            className="w-full min-h-40 p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+            className="border border-[#DFDFDF] w-full min-h-40 p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
             placeholder="Message..."
             value={credentials.message}
             onChange={(e) => setCredentials({ ...credentials, message: e.target.value })}

@@ -12,7 +12,7 @@ function RealisationsSection() {
       projectLink: 'https://coursdesign.com/parcandremalraux1/',
       tags: ['WordPress', 'Figma', 'JavaScript'],
       date: 'Avril 2025',
-      imgsrc: '/pngs/parc_andre_malraux.png',
+      imgsrc: '/pngs/parc_andre_malraux2.png',
       gradientColors: { from: 'from-[#2A5801]', to: 'to-[#BDED62]' }
     },
     {
@@ -21,7 +21,7 @@ function RealisationsSection() {
       projectLink: 'https://dxpi03.webynov.com/',
       tags: ['WordPress', 'Elementor', 'Figma', 'Javascript'],
       date: 'Mai 2025',
-      imgsrc: '/pngs/babelmaster.png',
+      imgsrc: '/pngs/babel_master2.png',
       gradientColors: { from: 'from-[#F73A5B]', to: 'to-[#FFCED7]' }
     },
   ]

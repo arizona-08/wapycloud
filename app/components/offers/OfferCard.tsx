@@ -2,6 +2,7 @@ import React from 'react'
 import OfferIndicator from './OfferIndicator'
 import OfferTitle from './OfferTitle'
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface OfferCardProps{
   title: string;
@@ -13,11 +14,12 @@ interface OfferCardProps{
   features: string[];
   features_pro: string[];
   isSubscribing: boolean;
+  setOffer: (offer: string) => void;
 }
 
-function OfferCard({title, plan, description, price, price_per_month, price_per_month_after_one_year, features, features_pro, isSubscribing}: OfferCardProps) {
+function OfferCard({title, plan, description, price, price_per_month, price_per_month_after_one_year, features, features_pro, isSubscribing, setOffer}: OfferCardProps) {
   return (
-    <li className={`inline-block min-w-72 w-full max-w-96 rounded-xl border border-gray-200 p-7 transition-all duration-300 ${isSubscribing ? 'bg-gradient-to-tr from-primary/20 from-20% to-white to-50%' : 'bg-white'}`}>
+    <li className={`inline-block min-w-72 w-full max-w-96 rounded-xl border border-gray-200 p-7 transition-all duration-300 ${title == 'Template' ? 'opacity-55' : ''} ${isSubscribing ? 'bg-gradient-to-tr from-primary/20 from-20% to-white to-50%' : 'bg-white'}`}>
       <OfferIndicator offerTitle={title}/>
       <div className="mb-5">
         <OfferTitle title={title} plan={plan} isSubscribing={isSubscribing}/>
@@ -55,7 +57,7 @@ function OfferCard({title, plan, description, price, price_per_month, price_per_
         <p className="font-semibold">Le plan {title} inclus:</p>
         <ul className="">
           {(isSubscribing ? features_pro : features).map((feature, index) => (
-            <li key={index} className="text-sm mt-2 flex items-center gap-2">
+            <li key={index} className="mt-2 flex items-center gap-2">
               <span className="inline-block">
                 <Image
                   src="/svgs/check.svg"
@@ -69,7 +71,11 @@ function OfferCard({title, plan, description, price, price_per_month, price_per_
           ))}
         </ul>
       </div>
-      <button className="bg-primary rounded-full text-center text-white py-1.5 text-sm w-full mt-5 flex items-center justify-center gap-2">
+      <Link
+        onClick={() => setOffer(title + '+')}
+        className="cursor-pointer bg-primary rounded-full text-center text-white py-1.5 text-sm w-full mt-5 flex items-center justify-center gap-2"
+        href={title === 'Template' ? '' : '#contact'}
+      >
         Je choisis ce plan
         <span className="inline-block w-3 h-3">
           <Image
@@ -79,7 +85,7 @@ function OfferCard({title, plan, description, price, price_per_month, price_per_
             height={16}
           />
         </span>
-      </button>
+      </Link>
     </li>
   )
 }

@@ -60,7 +60,7 @@ function TeamMembersCarousel({ teamMembers }: TeamMembersCarouselProps) {
   return (
     <div className="mt-8">
 
-      <div ref={scrollRef} className="flex items-center justify-start gap-5 overflow-x-auto pb-5 snap-x snap-mandatory scrollbar-hide lg:justify-center xl:gap-10">
+      <div ref={scrollRef} className="flex items-center justify-start gap-5 overflow-x-auto pb-5 snap-x snap-mandatory scrollbar-hide lg:justify-between xl:gap-10">
         {teamMembers.map((member, index) => (
           <TeamMemberCard key={index} member={member} />
         ))}

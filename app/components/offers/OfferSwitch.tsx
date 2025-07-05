@@ -23,7 +23,7 @@ function OfferSwitch({
       {/* Boutons */}
       <button
         onClick={triggerUnsubscribe}
-        className={`z-10 flex-1 text-center py-2 px-3 text-sm rounded-full transition-colors duration-200 ${
+        className={`cursor-pointer z-10 flex-1 text-center py-2 px-3 text-sm rounded-full transition-colors duration-200 ${
           !isSubscription ? 'text-white font-medium' : 'text-gray-500 font-normal'
         }`}
       >
@@ -31,7 +31,7 @@ function OfferSwitch({
       </button>
       <button
         onClick={triggerSubscribe}
-        className={`z-10 flex-1 text-center py-2 px-3 text-sm rounded-full transition-colors duration-200 ${
+        className={`cursor-pointer z-10 flex-1 text-center py-2 px-3 text-sm rounded-full transition-colors duration-200 ${
           isSubscription ? 'text-white font-medium' : 'text-gray-500 font-normal'
         }`}
       >

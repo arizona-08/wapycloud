@@ -4,7 +4,12 @@ import Title from '../components/Title'
 import OfferCard from '../components/offers/OfferCard'
 import OfferSwitch from '../components/offers/OfferSwitch'
 
-function OfferSection() {
+interface OfferSectionProps{
+  setOffer: (offer: string) => void;
+}
+
+
+function OfferSection({setOffer}: OfferSectionProps) {
   const offers = [
     {
       title: "Template",
@@ -75,6 +80,7 @@ function OfferSection() {
     },
   ]
   const [isSubscribing, setIsSuscribing] = React.useState(false);
+  
 
   function handleSubscribe(){
     setIsSuscribing(true)
@@ -116,6 +122,7 @@ function OfferSection() {
                 features={offer.features}
                 features_pro={offer.features_pro}
                 isSubscribing={isSubscribing}
+                setOffer={() => setOffer(isSubscribing ? `${offer.title} +` : offer.title) }
               />
             ))}
             
