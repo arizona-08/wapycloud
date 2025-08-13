@@ -1,14 +1,25 @@
 'use client'
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios';
+import { useOffer } from './Context/OfferProvider';
+import { Offer } from './Context/OfferContext';
+
+interface ContactFormCredentials{
+  firstname: string;
+  lastname: string;
+  email: string;
+  plan: string | Offer;
+  message: string;
+}
 
 function ContactForm() {
-  const [credentials, setCredentials] = React.useState({
+  const {offer, switchOffer} = useOffer();
+  const [credentials, setCredentials] = React.useState<ContactFormCredentials>({
     firstname: '',
     lastname: '',
     email: '',
-    plan: 'Template',
+    plan: offer,
     message: ''
   });
 
@@ -20,6 +31,11 @@ function ContactForm() {
     "Essentiel +",
     "Pro +",
   ]
+
+  useEffect(() => {
+    setCredentials((prev) => ({ ...prev, plan: offer }));
+  }, [offer]);
+
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -42,7 +58,7 @@ function ContactForm() {
               type="text"
               name="firstname"
               id="firstname"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               placeholder="Prénom"
               value={credentials.firstname}
               onChange={(e) => setCredentials({ ...credentials, firstname: e.target.value })}
@@ -56,7 +72,7 @@ function ContactForm() {
               type="text"
               name="lastname"
               id="lastname"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               placeholder="Nom"
               value={credentials.lastname}
               onChange={(e) => setCredentials({ ...credentials, lastname: e.target.value })}
@@ -73,8 +89,8 @@ function ContactForm() {
               type="text"
               name="email"
               id="email"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
-              placeholder="email"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              placeholder="Email"
               value={credentials.email}
               onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
               required
@@ -86,12 +102,17 @@ function ContactForm() {
             <select
               name="plan_select"
               id="plan_select"
-              className="w-full p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+              className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               value={credentials.plan}
-              onChange={(e) => setCredentials({ ...credentials, plan: e.target.value })}
+              onChange={(e) => {
+                const value = e.target.value as Offer;
+                setCredentials({ ...credentials, plan: value });
+                switchOffer(value); // 🔥 mise à jour du contexte aussi
+              }}
               required
             >
-              {plans.map((plan, index) => (
+              {plans.map((plan, index) => !plan.startsWith('Template') && (
+               
                 <option key={index} value={plan}>
                   {plan}
                 </option>
@@ -106,7 +127,7 @@ function ContactForm() {
           <textarea
             name="message"
             id="message"
-            className="w-full min-h-40 p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
+            className="border border-[#DFDFDF] w-full min-h-40 p-2 bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
             placeholder="Message..."
             value={credentials.message}
             onChange={(e) => setCredentials({ ...credentials, message: e.target.value })}

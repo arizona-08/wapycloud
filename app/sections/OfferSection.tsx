@@ -3,6 +3,8 @@ import React from 'react'
 import Title from '../components/Title'
 import OfferCard from '../components/offers/OfferCard'
 import OfferSwitch from '../components/offers/OfferSwitch'
+import { Offer } from '../components/Context/OfferContext'
+
 
 function OfferSection() {
   const offers = [
@@ -74,7 +76,8 @@ function OfferSection() {
 
     },
   ]
-  const [isSubscribing, setIsSuscribing] = React.useState(false);
+  const [isSubscribing, setIsSuscribing] = React.useState(true);
+  
 
   function handleSubscribe(){
     setIsSuscribing(true)
@@ -93,7 +96,7 @@ function OfferSection() {
 
         <div>
           <div className="max-w-2xl">
-            <h3 className="text-2xl font-bold mb-3">Une solution clé en main pour créer votre site<span className="font-secondary text-primary font-normal"> sans complications.</span></h3>
+            <h3 className="text-4xl font-bold mb-3">Une solution clé en main pour créer votre site<span className="font-secondary text-primary font-normal"> sans complications.</span></h3>
             <p>
               Que vous soyez indépendant, artisan, commerçant ou dirigeant d’entreprise, nous vous proposons une solution simple, rapide et performante pour être visible en ligne.
             </p>

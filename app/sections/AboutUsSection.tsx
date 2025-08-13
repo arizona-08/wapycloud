@@ -79,16 +79,16 @@ function AboutUsSection() {
             <p className="text-custom-text-gray mt-5">Avec 12 années d'expertise au total, notre équipe est là pour vous accompagner à réaliser votre site web</p>
           </div>
 
-          <div className="max-w-3xl">
-            <h3 className="text-2xl font-bold mb-3">Des compétences solides pour des sites qui <span className="font-secondary text-primary font-normal">tiennent la route.</span></h3>
+          <div className="max-w-2xl">
+            <h3 className="text-4xl font-bold mb-3">Des compétences solides pour des sites qui <span className="font-secondary text-primary font-normal">tiennent la route.</span></h3>
             <p>
               Nous combinons design, performance et technologies modernes pour vous livrer des sites efficaces, durables et évolutifs. Notre équipe maîtrise chaque étape de la création d’un site web, du prototype à la mise en ligne.
             </p>
           </div>
 
-          <ul className="prestation-cards flex items-start gap-8 mt-4 overflow-auto pb-4 md:gap-8">
+          <ul className="prestation-cards flex items-stretch gap-8 mt-4 overflow-auto pb-4 md:gap-8">
             { prestations.map((prestation, index) => (
-              <li className="inline-block" key={index}>
+              <li  key={index}>
                 <PrestationCard>
                   <PrestationImage imgSrc={prestation.imgSrc} alt={prestation.alt}/>
                   <PrestationDescription 
@@ -117,9 +117,9 @@ function AboutUsSection() {
               </ul>
             </div>
 
-            <div className="max-w-xl right flex-1">
+            <div className="max-w-2xl right flex-1">
               <div>
-                <h3 className="text-2xl font-bold mb-3">Pouquoi nous confier <span className="font-secondary text-primary">votre site ?</span></h3>
+                <h3 className="text-4xl font-bold mb-3">Pouquoi nous confier <span className="font-secondary text-primary">votre site ?</span></h3>
                 <p>
                   Nous ne vous vendons pas un simple site. Nous vous livrons une solution complète, pensée pour durer, évoluer et performer dès le premier jour.
                 </p>

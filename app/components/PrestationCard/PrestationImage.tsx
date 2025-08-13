@@ -15,7 +15,7 @@ function PrestationImage({ imgSrc, alt }: PrestationImageProps) {
         width={0}
         height={0}
         sizes="100vw"
-        style={{ width: '100%', height: 'auto' }}
+        style={{ width: '100%', height: '135px' }}
       />
     </div>
   )

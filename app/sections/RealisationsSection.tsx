@@ -12,7 +12,7 @@ function RealisationsSection() {
       projectLink: 'https://coursdesign.com/parcandremalraux1/',
       tags: ['WordPress', 'Figma', 'JavaScript'],
       date: 'Avril 2025',
-      imgsrc: '/pngs/parc_andre_malraux.png',
+      imgsrc: '/pngs/parc_andre_malraux2.png',
       gradientColors: { from: 'from-[#2A5801]', to: 'to-[#BDED62]' }
     },
     {
@@ -21,7 +21,7 @@ function RealisationsSection() {
       projectLink: 'https://dxpi03.webynov.com/',
       tags: ['WordPress', 'Elementor', 'Figma', 'Javascript'],
       date: 'Mai 2025',
-      imgsrc: '/pngs/babelmaster.png',
+      imgsrc: '/pngs/babel_master2.png',
       gradientColors: { from: 'from-[#F73A5B]', to: 'to-[#FFCED7]' }
     },
   ]
@@ -34,8 +34,8 @@ function RealisationsSection() {
         </div>
 
         <div>
-          <div className="max-w-xl">
-            <h3 className="text-2xl font-bold mb-3">Des projets concrets, des <span className="font-secondary text-primary font-normal">résultats visibles.</span></h3>
+          <div className="max-w-2xl">
+            <h3 className="text-4xl font-bold mb-3">Des projets concrets, des <span className="font-secondary text-primary font-normal">résultats visibles.</span></h3>
             <p>
               Vous pouvez retrouver ci-dessous différents sites web que nous sommes capables
               de mettre en place pour répondre à vos besoins.

@@ -28,7 +28,7 @@
 }
 
 body {
-  
+  scroll-behavior: smooth;
 }
 
 .burger-menu.active{

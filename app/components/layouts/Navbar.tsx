@@ -13,7 +13,7 @@ function Navbar() {
   ]
 
   return (
-    <header className="sticky top-0 left-0 w-full bg-white z-40">
+    <header className="sticky top-0 left-0 w-full bg-white z-40 border-b border-primary">
       <nav className="relative px-6 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-1">
           <div className="logo-container">
@@ -42,7 +42,7 @@ function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <a href="#" className="flex items-center gap-1 bg-primary text-white p-3 rounded-full">
+          <a href="#offres" className="flex items-center gap-1 bg-primary text-white p-3 rounded-full">
             <Image
               src="/svgs/web.svg"
               alt="web"
