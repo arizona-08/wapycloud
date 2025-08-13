@@ -3,13 +3,10 @@ import React from 'react'
 import Title from '../components/Title'
 import OfferCard from '../components/offers/OfferCard'
 import OfferSwitch from '../components/offers/OfferSwitch'
-
-interface OfferSectionProps{
-  setOffer: (offer: string) => void;
-}
+import { Offer } from '../components/Context/OfferContext'
 
 
-function OfferSection({setOffer}: OfferSectionProps) {
+function OfferSection() {
   const offers = [
     {
       title: "Template",
@@ -79,7 +76,7 @@ function OfferSection({setOffer}: OfferSectionProps) {
 
     },
   ]
-  const [isSubscribing, setIsSuscribing] = React.useState(false);
+  const [isSubscribing, setIsSuscribing] = React.useState(true);
   
 
   function handleSubscribe(){
@@ -122,7 +119,6 @@ function OfferSection({setOffer}: OfferSectionProps) {
                 features={offer.features}
                 features_pro={offer.features_pro}
                 isSubscribing={isSubscribing}
-                setOffer={() => setOffer(isSubscribing ? `${offer.title} +` : offer.title) }
               />
             ))}
             

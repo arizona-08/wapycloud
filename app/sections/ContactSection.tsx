@@ -3,11 +3,8 @@ import Title from '../components/Title'
 import ContactForm from '../components/ContactForm'
 import Image from 'next/image'
 
-interface ContactSectionProps{
-  selectedOffer: string
-}
 
-function ContactSection({selectedOffer}: ContactSectionProps) {
+function ContactSection() {
   return (
     <section id="contact" className="my-28">
       <div className="p-5 max-w-7xl mx-auto">
@@ -24,7 +21,7 @@ function ContactSection({selectedOffer}: ContactSectionProps) {
         </div>
 
         <div className="mt-7 md:flex md:justify-center md:items-stretch">
-          <ContactForm selectedOffer={selectedOffer}/>
+          <ContactForm/>
           <div className="hidden md:block relative flex-1 rounded-tr-lg rounded-br-lg overflow-hidden">
             <Image
               src="/pngs/contact-form-pic.jpg"

@@ -16,19 +16,11 @@ function OfferSwitch({
       {/* Capsule animée */}
       <div
         className={`absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-full bg-primary transition-transform duration-300 ease-in-out ${
-          isSubscription ? 'translate-x-full' : 'translate-x-0'
+          isSubscription ? 'translate-x-0' : 'translate-x-full'
         }`}
       />
 
       {/* Boutons */}
-      <button
-        onClick={triggerUnsubscribe}
-        className={`cursor-pointer z-10 flex-1 text-center py-2 px-3 text-sm rounded-full transition-colors duration-200 ${
-          !isSubscription ? 'text-white font-medium' : 'text-gray-500 font-normal'
-        }`}
-      >
-        Sans abonnement
-      </button>
       <button
         onClick={triggerSubscribe}
         className={`cursor-pointer z-10 flex-1 text-center py-2 px-3 text-sm rounded-full transition-colors duration-200 ${
@@ -36,6 +28,14 @@ function OfferSwitch({
         }`}
       >
         Avec abonnement
+      </button>
+      <button
+        onClick={triggerUnsubscribe}
+        className={`cursor-pointer z-10 flex-1 text-center py-2 px-3 text-sm rounded-full transition-colors duration-200 ${
+          !isSubscription ? 'text-white font-medium' : 'text-gray-500 font-normal'
+        }`}
+      >
+        Sans abonnement
       </button>
     </div>
   );

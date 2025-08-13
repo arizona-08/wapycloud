@@ -8,19 +8,14 @@ import TeamSection from "./sections/TeamSection";
 import React from "react";
 
 export default function Home() {
-  const [pickedOffer, setPickedOffer] = React.useState("Essentiel");
-  function handleSetOffer(offer: string){
-    setPickedOffer(offer)
-  }
-
   return (
     <div className="">
       <HeroSection />
       <AboutUsSection />
       <RealisationsSection />
-      <OfferSection setOffer={handleSetOffer} />
+      <OfferSection/>
       <TeamSection />
-      <ContactSection selectedOffer={pickedOffer} />
+      <ContactSection/>
     </div>
   );
 }

@@ -1,17 +1,25 @@
 'use client'
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios';
+import { useOffer } from './Context/OfferProvider';
+import { Offer } from './Context/OfferContext';
 
-interface ContactFormProps {
-  selectedOffer: string
+interface ContactFormCredentials{
+  firstname: string;
+  lastname: string;
+  email: string;
+  plan: string | Offer;
+  message: string;
 }
-function ContactForm({selectedOffer}: ContactFormProps) {
-  const [credentials, setCredentials] = React.useState({
+
+function ContactForm() {
+  const {offer, switchOffer} = useOffer();
+  const [credentials, setCredentials] = React.useState<ContactFormCredentials>({
     firstname: '',
     lastname: '',
     email: '',
-    plan: selectedOffer,
+    plan: offer,
     message: ''
   });
 
@@ -23,6 +31,11 @@ function ContactForm({selectedOffer}: ContactFormProps) {
     "Essentiel +",
     "Pro +",
   ]
+
+  useEffect(() => {
+    setCredentials((prev) => ({ ...prev, plan: offer }));
+  }, [offer]);
+
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -91,10 +104,15 @@ function ContactForm({selectedOffer}: ContactFormProps) {
               id="plan_select"
               className="w-full p-2 border border-[#DFDFDF] bg-custom-background-gray placeholder:text-custom-text-gray rounded-md outline-none"
               value={credentials.plan}
-              onChange={(e) => setCredentials({ ...credentials, plan: e.target.value })}
+              onChange={(e) => {
+                const value = e.target.value as Offer;
+                setCredentials({ ...credentials, plan: value });
+                switchOffer(value); // 🔥 mise à jour du contexte aussi
+              }}
               required
             >
-              {plans.map((plan, index) => (
+              {plans.map((plan, index) => !plan.startsWith('Template') && (
+               
                 <option key={index} value={plan}>
                   {plan}
                 </option>
